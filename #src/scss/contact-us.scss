@@ -1,0 +1,156 @@
+.contact-us-block {
+  position: relative;
+  @include responsiveSize("padding-top", 100, 100);
+  @include responsiveSize("padding-bottom", 100, 100);
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__img-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    img {
+      width: 100%;
+      max-width: 850px;
+    }
+  }
+}
+
+.contact-us-block-left {
+  &__column {
+    box-shadow: 0 0 24px 0 rgba(64, 199, 255, 0.32);
+    background-color: $white;
+    width: 100%;
+    padding: 60px 30px 108px 30px;
+  }
+  &__title {
+    @include responsiveSize("font-size", 34, 24);
+    font-weight: 500;
+    line-height: 1.39;
+    color: $reddish-orange;
+    @include responsiveSize("margin-bottom", 20, 20);
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    @include responsiveSize("font-size", 20, 18);
+    line-height: 1.25;
+    color: $warm-grey-three;
+    @include responsiveSize("margin-bottom", 50, 50);
+  }
+
+  &__input {
+    display: block;
+    padding: 20px 0px 20px 20px;
+    border: solid 1px #e0e6e6;
+    width: 100%;
+    @include responsiveSize("margin-bottom", 35, 35);
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+.contact-us-block-right {
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 24px 0 rgba(64, 199, 255, 0.32);
+  background-color: $white;
+  width: 100%;
+  max-width: 670px;
+  padding: 30px;
+
+  &__title {
+    @include responsiveSize("font-size", 30, 30);
+    font-weight: 500;
+    line-height: 2;
+    color: $black;
+    @include responsiveSize("margin-bottom", 30, 30);
+  }
+
+  &__input {
+    border: solid 1px #cff0ff;
+    background-color: $white;
+    display: block;
+    width: 100%;
+    padding: 15px 0px 15px 20px;
+    @include responsiveSize("margin-bottom", 20, 20);
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 0px 170px 20px;
+    border: solid 1px #cff0ff;
+    background-color: $white;
+    resize: none;
+    @include responsiveSize("margin-bottom", 30, 30);
+  }
+
+  &__btn {
+    max-width: 210px;
+    padding: 0px 0px 0px 0px;
+    min-height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-us-block {
+    &__row {
+      justify-content: space-between;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .contact-us-block-right {
+    &__textarea {
+      padding: 20px 0px 170px 20px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .contact-us-block {
+    &__row {
+      flex-direction: row;
+    }
+  }
+  .contact-us-block-left {
+    margin-bottom: 30px;
+    &__column {
+      max-width: 450px;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .jc-left {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 320px) {
+  .contact-us-block {
+    &__row {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .contact-us-block-left {
+    margin-bottom: 30px;
+    &__column {
+      max-width: none;
+    }
+  }
+  .contact-us-block-right {
+    &__textarea {
+      padding: 20px 0px 50px 20px;
+    }
+  }
+  .jc-left {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,83 @@
+.easy-steps-block {
+  @include responsiveSize("padding-top", 100, 100);
+  @include responsiveSize("padding-bottom", 410, 410);
+  background: url("../img/easy-steps-bg.png") 0 0 / auto auto no-repeat;
+  &__title {
+    @include responsiveSize("margin-bottom", 85, 85);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+}
+
+.easy-steps-block-colums {
+  margin: 0 15px;
+  text-align: center;
+  box-shadow: 0 0 24px 0 rgba(64, 199, 255, 0.32);
+  flex: 1 1 30%;
+  padding: 65px 20px;
+  background-color: $white;
+
+  &__logo {
+    @include responsiveSize("font-size", 35.5, 35.5);
+    font-weight: 900;
+    line-height: 1.27;
+    color: $reddish-orange;
+    @include responsiveSize("margin-bottom", 30, 30);
+  }
+
+  &__title {
+    @include responsiveSize("margin-bottom", 10, 10);
+    @include responsiveSize("font-size", 22, 22);
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+.colums-title {
+}
+.colums-text {
+}
+
+.pw225 {
+  p {
+    width: 100%;
+    max-width: 225px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) {
+  .easy-steps-block {
+    .easy-steps-block-colums {
+      margin: 0px 15px 0px 15px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .easy-steps-block {
+    &__row {
+      flex-direction: row;
+    }
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 320px) {
+  .easy-steps-block {
+    &__row {
+      flex-direction: column;
+    }
+    .easy-steps-block-colums {
+      margin: 0px 15px 30px 15px;
+    }
+  }
+}

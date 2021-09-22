@@ -1,0 +1,82 @@
+.subscribe-block {
+  @include responsiveSize("padding-top", 150, 150);
+  @include responsiveSize("padding-bottom", 150, 170);
+  background: url("../img/subscribe-bg.png") 0 0 / auto auto no-repeat;
+
+  &__title {
+    color: $white-two;
+  }
+
+  &__subtitle {
+    @include responsiveSize("font-size", 25, 25);
+    font-weight: bold;
+    line-height: 1.36;
+    text-align: center;
+    color: $white-two;
+    @include responsiveSize("margin-bottom", 40, 40);
+  }
+
+  &__search-form {
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__left-input {
+    background-color: $white;
+    transition: all 1s ease;
+    &:focus {
+      transition: all 1s ease;
+      background: url("../img/placeholder-icon.svg") 0px 0px / 0px 0px no-repeat;
+      background-color: $white;
+      padding-left: 24px;
+    }
+  }
+
+  &__btn {
+  }
+}
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 768px) {
+  .subscribe-block {
+    &__row {
+      flex-wrap: nowrap;
+    }
+    &__left-input {
+      background: url("../img/placeholder-icon.svg") 20px 16px / 32px 30px
+        no-repeat;
+      background-color: $white;
+    }
+    &__btn {
+      max-width: 166px;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .subscribe-block {
+    &__left-input {
+      padding-left: 70px;
+    }
+  }
+}
+@media (min-width: 320px) {
+  .subscribe-block {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__left-input {
+      background: url("../img/placeholder-icon.svg") 20px 12px / 32px 30px
+        no-repeat;
+      background-color: $white;
+      padding-left: 60px;
+    }
+    &__btn {
+      max-width: none;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.home-block {
+  @include responsiveSize("padding-top", 207, 100);
+  @include responsiveSize("padding-bottom", 207, 100);
+  background: url("../img/home-bg.png") 0 0 / cover no-repeat;
+  @include responsiveSize("min-height", 800, 710);
+  &__title {
+    @include responsiveSize("margin-bottom", 20, 20);
+  }
+
+  &__subtitle {
+    font-family: "Roboto";
+    @include responsiveSize("font-size", 20, 18);
+    font-weight: bold;
+    line-height: 1.4;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    max-width: 477px;
+    @include responsiveSize("margin-bottom", 50, 50);
+  }
+
+  &__search-form {
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__btn {
+  }
+}
+.box-shadow {
+  &:focus {
+    box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+  }
+}
+.form {
+  background-color: $input-bg;
+  padding: 20px;
+  width: 100%;
+  max-width: 750px;
+}
+.btn-submit {
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 65px;
+  background-color: $reddish-orange;
+  color: $white;
+  @include responsiveSize("font-size", 18, 16);
+  font-weight: bold;
+  color: $white;
+  &:hover {
+    background-color: darken($reddish-orange, 20%);
+  }
+}
+.input {
+  width: 100%;
+  padding: 19px 0px 19px 24px;
+  &::-webkit-input-placeholder {
+    color: $pinkish-grey;
+  }
+  &:-moz-placeholder {
+    color: $pinkish-grey;
+  }
+  &::-moz-placeholder {
+    color: $pinkish-grey;
+  }
+  &:-ms-input-placeholder {
+    color: $pinkish-grey;
+  }
+}
+
+.title {
+  @include responsiveSize("font-size", 50, 35);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  color: $white;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) {
+  .home-block {
+    margin-top: 118px;
+  }
+}
+@media (min-width: 768px) {
+  .home-block {
+    &__row {
+      flex-wrap: nowrap;
+    }
+    &__btn {
+      max-width: 166px;
+    }
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 320px) {
+  .home-block {
+    margin-top: 60px;
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__btn {
+      max-width: none;
+    }
+  }
+}

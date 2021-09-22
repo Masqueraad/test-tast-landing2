@@ -1,0 +1,23 @@
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 320px) {
+    max-width: none;
+  }
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================

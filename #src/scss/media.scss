@@ -1,0 +1,92 @@
+.iframe {
+  margin: -300px auto 100px auto;
+  width: 100%;
+  max-width: 828px;
+}
+.media-block {
+  @include responsiveSize("padding-bottom", 330, 330);
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+}
+.media-block-colums {
+  flex: 1 1 32%;
+  box-shadow: 0 0 24px 0 rgba(64, 199, 255, 0.32);
+  background-color: $reddish-orange;
+  &__title {
+    padding: 20px 0 20px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.27;
+    color: $white;
+    min-height: 64px;
+  }
+
+  &__text {
+    line-height: 1.75;
+    color: $white;
+  }
+
+  &__content {
+    padding: 20px 0 20px 20px;
+    border-top: 1px solid $white;
+    min-height: 96px;
+  }
+}
+
+.check-icon {
+  padding: 20px 0 20px 56px;
+  position: relative;
+  &::before {
+    content: "";
+    background: url("../img/table-check.svg") 0 0 / cover no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) {
+  .media-block-colums {
+    margin: 0px 5px 0px 5px;
+  }
+}
+@media (min-width: 768px) {
+  .media-block {
+    &__row {
+      flex-direction: row;
+    }
+  }
+  .media-block-colums {
+    &__content {
+      min-height: 96px;
+    }
+  }
+  .none {
+    display: block;
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 320px) {
+  .media-block {
+    &__row {
+      flex-direction: column;
+    }
+  }
+  .media-block-colums {
+    margin: 0px 5px 10px 5px;
+    &__content {
+      min-height: 50px;
+    }
+  }
+  .none {
+    display: none;
+  }
+}
