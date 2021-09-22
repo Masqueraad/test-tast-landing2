@@ -355,55 +355,6 @@ h6 {
   padding: 0 15px;
 }
 
-.tab-triggers__item {
-  margin: 0px 15px 0px 15px;
-  font-size: 16px;
-  line-height: 1.5;
-  color: black;
-}
-
-.tab-triggers__item:hover,
-.tab-triggers__item:focus {
-  color: red;
-}
-
-.tab-triggers__item--active {
-  color: red;
-}
-
-.tabs-content__item {
-  visibility: hidden;
-  opacity: 0;
-  width: 0px;
-  height: 0px;
-  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -o-transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-
-.tabs-content__item--active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: visible;
-  opacity: 1;
-  width: auto;
-  height: auto;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
 .home-block {
   padding-top: 207px;
   padding-bottom: 207px;
