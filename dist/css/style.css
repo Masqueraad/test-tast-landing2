@@ -527,7 +527,7 @@ h6 {
 .content-title {
   font-size: 40px;
   font-weight: bold;
-  line-height: 0.7;
+  line-height: 1;
   text-align: center;
   color: #333;
 }
